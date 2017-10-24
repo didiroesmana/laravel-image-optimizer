@@ -29,7 +29,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             return new ImageOptimizer($options, $logger);
         });
 
-        $this->app['router']->aliasMiddleware('AutoImageOptimizer', AutoImageOptimizer::class);
+        $this->app['router']->middleware('AutoImageOptimizer', AutoImageOptimizer::class);
     }
 
     /**
